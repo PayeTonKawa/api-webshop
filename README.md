@@ -22,8 +22,6 @@
     - [DELETE] /api/orders/{id} -> supprime une commande spécifique
 ### prodpects :
     - [GET] /api/prospects/ -> liste des clients sans commandes
-    - [POST] /api/orders/{id} -> modifie une commande spécifique
-    - [DELETE] /api/orders/{id} -> supprime une commande spécifique
 ### customers :
     - [GET] /api/customers/ -> liste les clients
     - [GET] /api/customers/{customer_id}/orders/ -> liste des commandes d’un client
