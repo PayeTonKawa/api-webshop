@@ -16,13 +16,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 });
                 break
             case 'PUT':
-                res.status(501);
+                res.status(501).end();
                 break
             case 'POST':
-                res.status(501);
+                res.status(501).end();
                 break
             case 'DELETE':
-                res.status(501);
+                res.status(501).end();
                 break
             default:
                 res.setHeader('Allow', ['GET', 'POST', 'PUT', 'DELETE']);
