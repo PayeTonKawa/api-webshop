@@ -6,7 +6,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const db = client.db("payetonkawa");
     const clientCollection = await db.collection('customers');
     const {method, query} = req
-    console.log(query);
     const id = query.id;
     return new Promise(() => {
         switch (method) {
