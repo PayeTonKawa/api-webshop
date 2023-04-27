@@ -19,8 +19,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                         {
                             return item.id == orderId;
                         }
-                      });
-                    res.status(200).json({"code": 200, "data": order});
+                    });
+                    res.status(200).json({"code": 200, "data": order[0]});
                 });
                 break
             default:
