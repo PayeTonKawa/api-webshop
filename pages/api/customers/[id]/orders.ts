@@ -11,7 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         switch (method) {
             case 'GET':
                 clientCollection.find({id: id}).toArray(function(err, result) {
-                    if (err) throw err;
+                    if (!result || result.length === 0) throw  res.status(200).json({"code": 404, "error":"Not found"});
                     res.status(200).json({"code": 200, "data": result[0].orders});
                 });
                 break
