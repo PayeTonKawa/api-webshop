@@ -12,7 +12,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             case 'GET':
                 clientCollection.find({orders: {$exists: true, $eq: []}}).toArray(function(err, result) {
                     if (err) throw err;
-                    res.status(200).json(result);
+                    res.status(200).json({"code": 200, "data": result});
                 });
                 break
             default:
