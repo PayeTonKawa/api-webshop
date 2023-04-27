@@ -20,6 +20,7 @@
     - [GET] /api/customers/ -> liste les clients
     - [GET] /api/customers/{customer_id}/orders/ -> liste des commandes d’un client
     - [GET] /api/customers/{customer_id}/orders/{order_id}/products -> liste de produits d’une commande
+    - [GET] /api/customers/{id} -> renvoi un client
     - [PUT] /api/customers/ -> ajoute un client
     - [POST] /api/customers/{id} -> modifie un client
     - [DELETE] /api/customers/{id} -> supprime un client
