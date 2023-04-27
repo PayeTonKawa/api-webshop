@@ -4,7 +4,7 @@ import clientPromise from "../../../lib/mongodb";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const client = await clientPromise;
     const db = client.db("payetonkawa");
-    const clientCollection = await db.collection('Produits');
+    const clientCollection = await db.collection('products');
     const {method, query} = req
     const id = query.id;
     return new Promise(() => {
