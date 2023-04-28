@@ -24,7 +24,7 @@ export const getStaticProps: GetStaticProps = async () => {
           {
             api_key: {
               type: 'apiKey',
-              name: 'X-AUTH-TOHEN',
+              name: 'X-AUTH-TOKEN',
               in: 'header',
             }
           }
