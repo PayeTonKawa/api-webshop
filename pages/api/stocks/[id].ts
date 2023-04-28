@@ -17,9 +17,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                     res.status(200).json({"code": 200, "data": {"stock": stock,"id": stock_id}});
                 });
                 break
-            case 'PUT':
-                res.status(501).end();
-                break
             case 'POST':
                 res.status(501).end();
                 break
@@ -27,7 +24,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 res.status(501).end();
                 break
             default:
-                res.setHeader('Allow', ['GET', 'POST', 'PUT', 'DELETE']);
+                res.setHeader('Allow', ['GET', 'POST', 'DELETE']);
                 res.status(405).end(`Method ${method} Not Allowed`);
         }
     })

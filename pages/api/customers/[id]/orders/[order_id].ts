@@ -1,9 +1,34 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import clientPromise from "../../../../../lib/mongodb";
 
-
-
-
+/**
+ * @swagger
+ * /api/customers/{customer_id}/orders/{order_id}/:
+ *   get:
+ *     tags:
+ *       - Customers
+ *     summary: Get customer order
+ *     responses:
+ *       200:
+ *         description: todo
+ *     parameters:
+ *       - name: customer_id
+ *         in: path
+ *         description: ID of customer
+ *         required: true
+ *         schema:
+ *           type: integer
+ *           format: int64
+ *       - name: order_id
+ *         in: path
+ *         description: ID of order
+ *         required: true
+ *         schema:
+ *           type: integer
+ *           format: int64
+ *     security:
+ *      - api_key: []
+ */
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const client = await clientPromise;
