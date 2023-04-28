@@ -19,6 +19,24 @@ export const getStaticProps: GetStaticProps = async () => {
         title: 'WebShop API',
         version: '1.0',
       },
+      components: {
+        securitySchemes: 
+          {
+            api_key: {
+              type: 'apiKey',
+              name: 'X-AUTH-TOHEN',
+              in: 'header',
+            }
+          }
+      
+      },
+
+
+
+
+
+
+
     },
   });
 

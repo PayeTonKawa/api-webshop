@@ -7,7 +7,7 @@ import clientPromise from "../../../../lib/mongodb";
  *   get:
  *     tags:
  *       - Customers
- *     summary: Get customer
+ *     summary: Get customer by id
  *     responses:
  *       200:
  *         description: todo
@@ -19,10 +19,12 @@ import clientPromise from "../../../../lib/mongodb";
  *         schema:
  *           type: integer
  *           format: int64
+ *     security:
+ *      - api_key: []
  *   post:
  *     tags:
  *       - Customers
- *     summary: Edit customer
+ *     summary: Edit customer by id
  *     responses:
  *       200:
  *         description: todo
@@ -34,10 +36,12 @@ import clientPromise from "../../../../lib/mongodb";
  *         schema:
  *           type: integer
  *           format: int64
+ *     security:
+ *      - api_key: []
  *   delete:
  *     tags:
  *       - Customers
- *     summary: Delete customer
+ *     summary: Delete customer by id
  *     responses:
  *       200:
  *         description: todo
@@ -49,6 +53,8 @@ import clientPromise from "../../../../lib/mongodb";
  *         schema:
  *           type: integer
  *           format: int64
+ *     security:
+ *      - api_key: []
  */
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

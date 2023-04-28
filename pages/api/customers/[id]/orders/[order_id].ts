@@ -26,6 +26,8 @@ import clientPromise from "../../../../../lib/mongodb";
  *         schema:
  *           type: integer
  *           format: int64
+ *     security:
+ *      - api_key: []
  */
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

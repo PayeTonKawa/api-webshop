@@ -11,6 +11,8 @@ import clientPromise from "../../../lib/mongodb";
  *     responses:
  *       200:
  *         description: todo
+ *     security:
+ *       - api_key: []
  *   put:
  *     tags:
  *       - Customers
@@ -18,6 +20,9 @@ import clientPromise from "../../../lib/mongodb";
  *     responses:
  *       200:
  *         description: todo
+ *     security:
+ *      - api_key: []
+ * 
  */
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
