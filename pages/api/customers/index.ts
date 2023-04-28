@@ -1,6 +1,18 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import clientPromise from "../../../lib/mongodb";
 
+/**
+ * @swagger
+ * /api/customers/:
+ *   get:
+ *     tags:
+ *       - Customers
+ *     summary: Get customers
+ *     responses:
+ *       200:
+ *         description: todo
+ */
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const client = await clientPromise;
     const db = client.db("payetonkawa");
@@ -24,7 +36,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 res.status(501).end();
                 break
             default:
-                res.setHeader('Allow', ['GET', 'POST', 'PUT', 'DELETE']);
+                res.setHeader('Allow', ['GET']);
                 res.status(405).end(`Method ${method} Not Allowed`);
         }
     })
