@@ -20,8 +20,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                     res.status(200).json({"code": 200, "data": resultArray});
                 });
                 break
+            case 'PUT':
+                res.status(501).end();
+                break
             default:
-                res.setHeader('Allow', ['GET']);
+                res.setHeader('Allow', ['GET', 'PUT']);
                 res.status(405).end(`Method ${method} Not Allowed`);
         }
     })
