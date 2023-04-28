@@ -11,6 +11,13 @@ import clientPromise from "../../../lib/mongodb";
  *     responses:
  *       200:
  *         description: todo
+ *   put:
+ *     tags:
+ *       - Customers
+ *     summary: Add customer
+ *     responses:
+ *       200:
+ *         description: todo
  */
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

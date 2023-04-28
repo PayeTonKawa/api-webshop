@@ -7,7 +7,7 @@ import clientPromise from "../../../../lib/mongodb";
  *   get:
  *     tags:
  *       - Customers
- *     summary: Get customers
+ *     summary: Get customer orders
  *     responses:
  *       200:
  *         description: todo
