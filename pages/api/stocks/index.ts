@@ -11,7 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         switch (method) {
             case 'GET':
                 clientCollection.find({}).toArray(function(err, result) {
-                    if (!result || result.length === 0) throw  res.status(200).json({"code": 404, "error":"Not found"});
+                    if (!result || result.length === 0) throw res.status(404).send({"code": 404, "error":"Not found"});
                     for (let index = 0; index < result.length; index++) {
                         const element = result[index];
                         resultArray.push({"stock": element.stock,"id": element.id})
