@@ -30,21 +30,12 @@ export const getStaticProps: GetStaticProps = async () => {
           }
       
       },
-
-
-
-
-
-
-
     },
   });
-
   return {
     props: {
       spec,
     },
   };
 };
-
 export default ApiDoc;
