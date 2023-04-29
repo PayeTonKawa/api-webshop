@@ -1,12 +1,35 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import clientPromise from "../../../lib/mongodb";
 
+/**
+ * @swagger
+ * /api/products/:
+ *   get:
+ *     tags:
+ *       - Products
+ *     summary: Get products
+ *     responses:
+ *       200:
+ *         description: todo
+ *     security:
+ *       - api_key: []
+ *   put:
+ *     tags:
+ *       - Products
+ *     summary: Add product
+ *     responses:
+ *       200:
+ *         description: todo
+ *     security:
+ *      - api_key: []
+ * 
+ */
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const client = await clientPromise;
     const db = client.db("payetonkawa");
     const clientCollection = await db.collection('products');
     const {method, query} = req
-
     return new Promise(() => {
         switch (method) {
             case 'GET':
