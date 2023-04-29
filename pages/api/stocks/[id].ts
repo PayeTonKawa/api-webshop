@@ -1,6 +1,62 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import clientPromise from "../../../lib/mongodb";
 
+/**
+ * @swagger
+ * /api/stocks/{stock_id}/:
+ *   get:
+ *     tags:
+ *       - Stocks
+ *     summary: Get stock by id
+ *     responses:
+ *       200:
+ *         description: todo
+ *     parameters:
+ *       - name: stock_id
+ *         in: path
+ *         description: ID of stock
+ *         required: true
+ *         schema:
+ *           type: integer
+ *           format: int64
+ *     security:
+ *      - api_key: []
+ *   post:
+ *     tags:
+ *       - Stocks
+ *     summary: Edit stock by id
+ *     responses:
+ *       200:
+ *         description: todo
+ *     parameters:
+ *       - name: stock_id
+ *         in: path
+ *         description: ID of stock
+ *         required: true
+ *         schema:
+ *           type: integer
+ *           format: int64
+ *     security:
+ *      - api_key: []
+ *   delete:
+ *     tags:
+ *       - Stocks
+ *     summary: Delete stock by id
+ *     responses:
+ *       200:
+ *         description: todo
+ *     parameters:
+ *       - name: stock_id
+ *         in: path
+ *         description: ID of stock
+ *         required: true
+ *         schema:
+ *           type: integer
+ *           format: int64
+ *     security:
+ *      - api_key: []
+ */
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const client = await clientPromise;
     const db = client.db("payetonkawa");
