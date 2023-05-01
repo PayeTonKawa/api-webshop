@@ -3,10 +3,10 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest --verbose"
   },
   "dependencies": {
-    "dotenv": "^16.0.3",
     "mongodb": "^3.5.9",
     "next": "latest",
     "next-swagger-doc": "^0.3.6",
@@ -16,9 +16,13 @@
     "swr": "^2.0.0"
   },
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.21.5",
     "@types/node": "^18.0.3",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
+    "dotenv": "^16.0.3",
+    "jest": "^27.0.6",
+    "supertest": "^6.3.3",
     "typescript": "^4.7.4"
   }
 }
