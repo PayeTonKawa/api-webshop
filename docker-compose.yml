@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  api_webshop_epsi:
+    image: api_webshop_epsi
+    build: .
+    deploy: 
+      replicas: 3
+
+  ngnix_webshop_epsi:
+    image: ngnix_webshop_epsi
+    build: ./ngnix
+    depends_on:
+      - api_webshop_epsi
+    ports:
+      - 4001:3000 
