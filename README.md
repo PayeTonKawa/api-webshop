@@ -14,18 +14,13 @@
     - [PUT] /api/stocks/ -> ajoute la quantité des stocks pour un produit spécifique
     - [POST] /api/stocks/{id} -> modifie un stocks spécifique
     - [DELETE] /api/stocks/{id} -> supprime un stocks spécifique
-### order :
-    - [GET] /api/orders/ -> renvoi la liste de toutes les commandes
-    - [GET] /api/orders/{id} -> renvoi une commande spécifique
-    - [PUT] /api/orders/ -> ajoute la quantité des stocks pour un produit spécifique
-    - [POST] /api/orders/{id} -> modifie une commande spécifique
-    - [DELETE] /api/orders/{id} -> supprime une commande spécifique
-### prodpects :
+### prospects :
     - [GET] /api/prospects/ -> liste des clients sans commandes
 ### customers :
     - [GET] /api/customers/ -> liste les clients
     - [GET] /api/customers/{customer_id}/orders/ -> liste des commandes d’un client
     - [GET] /api/customers/{customer_id}/orders/{order_id}/products -> liste de produits d’une commande
+    - [GET] /api/customers/{id} -> renvoi un client
     - [PUT] /api/customers/ -> ajoute un client
     - [POST] /api/customers/{id} -> modifie un client
     - [DELETE] /api/customers/{id} -> supprime un client
