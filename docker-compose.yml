@@ -12,4 +12,4 @@ services:
     depends_on:
       - api_webshop_epsi
     ports:
-      - 4001:3000 
+      - 4001:4001 
